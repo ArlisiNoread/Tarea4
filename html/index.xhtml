@@ -1,0 +1,267 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//ES"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xml:lang="es" lang="es" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+
+    <script>
+        function agregar(id) {
+            console.log("Veamos: " + id);
+            var object = document.getElementById(id);
+            if (object.value === "") {
+                return;
+            }
+            console.log(object.value);
+            var comentarios = document.getElementById('com-' + id);
+            var parrafo = document.createElement('p');
+            parrafo.style = "background-color: grey; margin: 1px !important";
+            parrafo.innerText = "" + object.value;
+            object.value = "";
+            comentarios.appendChild(parrafo);
+            comentarios.scrollTop = comentarios.scrollHeight;
+
+        }
+
+        function enterEvento(id) {
+            if (event.key === 'Enter') {
+                agregar(id);
+            }
+        }
+    </script>
+</head>
+
+<body style="background-color: #382A27;">
+
+    <nav class="navbar navbar-light bg-light">
+
+        <a class="navbar-brand" href="#">
+            <img src="https://img.favpng.com/16/0/15/shiba-inu-dogecoin-clip-art-png-favpng-KnrzgsMvKHLv32SzNk8SCDDT0_t.jpg"
+                width="30" height="30" class="d-inline-block align-top" alt="">
+            Tienda de libros la panchita
+        </a>
+    </nav>
+
+    <!-- Zona de libros-->
+    <div class="container-fluid" style="padding-top: 20px;">
+        <div class="row">
+            <div class="col-1" style="">
+            </div>
+
+            <div class="col-10">
+
+                <!--Libro 1-->
+                <div class="container" style="background-color: #FFE5CC; padding: 5px;">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://kbimages1-a.akamaihd.net/7a697a8c-9a0d-48bc-822f-50eb846236d4/353/569/90/False/harry-potter-and-the-philosopher-s-stone-3.jpg"
+                                class="img-fluid" alt="Responsive image" style="height: 250px;">
+                        </div>
+                        <div class="col-4" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Harry Potter
+                            </p>
+                            <p style="height: 200px; overflow-y: scroll;">
+                                Harry Potter se ha quedado huérfano y vive en casa de sus abominables tíos y del
+                                insoportable primo Dudley. Harry se siente muy triste y solo, hasta que un buen día
+                                recibe una carta que cambiará su vida para siempre. En ella le comunican que ha sido
+                                aceptado como alumno en el colegio interno Hogwarts de magia y hechicería. A partir de
+                                ese momento, la suerte de Harry da un vuelco espectacular. En esa escuela tan especial
+                                aprenderá encantamientos, trucos fabulosos y tácticas de defensa contra las malas artes.
+                                Se convertirá en el campeón escolar de Quidditch, especie de fútbol aéreo que se juega
+                                montado sobre escobas, y se hará un puñado de buenos amigos, aunque también algunos
+                                temibles enemigos. Pero sobre todo conocerá los secretos que le permitirán cumplir con
+                                su destino. Pues, aunque no lo parezca a primera vista, Harry no es un chico común y
+                                corriente. ¡Es un verdadero mago!
+                            </p>
+                        </div>
+                        <div class="col-6" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Comentarios
+                            </p>
+                            <div id="com-libro1" style="height: 150px; overflow-y: scroll;">
+
+                            </div>
+                            <div style="width: 100%;">
+                                <input id="libro1" style="width: 75%;" type="text" name="fname"
+                                    onkeydown="enterEvento('libro1')" placeholder="Inserte su comentario">
+                                <button type="button" onclick="agregar('libro1')">Insertar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Libro 2-->
+                <div class="container" style="background-color: #FFE5CC; padding: 5px; margin-top: 10px;">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://www.planetadelibros.com/usuaris/libros/fotos/13/m_libros/cronicas-marcianas_9788445076538.jpg"
+                                class="img-fluid" alt="Responsive image" style="height: 250px;">
+                        </div>
+                        <div class="col-4" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Cronicas Marcianas
+                            </p>
+                            <p style="height: 200px; overflow-y: scroll;">
+                                Un clásico del siglo XX: la obra que consolidó a Bradbury como uno de los mejores
+                                escritores de la narrativa norteamericana. Esta colección de relatos recoge la crónica
+                                de la colonización de Marte por parte de una humanidad que huye de un mundo al borde de
+                                la destrucción. Los colonos llevan consigo sus deseos más íntimos y el sueño de
+                                reproducir en el Planeta Rojo una civilización de perritos calientes, cómodos sofás y
+                                limonada en el porche al atardecer. Pero su equipaje incluye también los miedos
+                                ancestrales, que se traducen en odio a lo diferente, y las enfermedades que diezmarán a
+                                los marcianos. Conforme a su concepción de lo que debe ser la ciencia ficción, Bradbury
+                                se traslada al futuro para iluminar el presente y explorar la naturaleza humana.
+                                Escritas en la década de los cuarenta, estas deslumbrantes e intensas historias
+                                constituyen un canto contra el racismo, la guerra y la censura, destilando nostalgia e
+                                idealismo.
+                            </p>
+                        </div>
+                        <div class="col-6" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Comentarios
+                            </p>
+                            <div id="com-libro2" style="height: 150px; overflow-y: scroll;">
+
+                            </div>
+                            <div style="width: 100%;">
+                                <input id="libro2" style="width: 75%;" type="text" name="fname"
+                                    onkeydown="enterEvento('libro2')" placeholder="Inserte su comentario">
+                                <button type="button" onclick="agregar('libro2')">Insertar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Libro 3-->
+                <div class="container" style="background-color: #FFE5CC; padding: 5px; margin-top: 10px;">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://www.popularlibros.com/imagenes_grandes/9788466/978846666248.JPG"
+                                class="img-fluid" alt="Responsive image" style="height: 250px;">
+                        </div>
+                        <div class="col-4" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                El Psicoanalista
+                            </p>
+                            <p style="height: 200px; overflow-y: scroll;">
+                                "Así comienza el anónimo que recibe Frederick Starks, psicoanalista con una larga
+                                experiencia y una vida tranquila. Starks tendrá que hurgar en su memoria y emplear toda
+                                su astucia para, en quince días, averiguar quién es el autor de la amenazadora misiva.
+                                De no conseguir su objetivo, deberá elegir entre suicidarse o ser testigo de cómo, uno
+                                tras otro, sus familiares y conocidos mueren por obra de un psicópata asesino, decidido
+                                a llevar hasta el fin su sed de venganza. «Las ilustraciones de Alejandro Colucci
+                                transmiten tanto misterio como belleza. De manera profunda y original, no solo captan el
+                                concepto de la historia, sino también el corazón mismo de esta.» John Katzenbach"
+                            </p>
+                        </div>
+                        <div class="col-6" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Comentarios
+                            </p>
+                            <div id="com-libro3" style="height: 150px; overflow-y: scroll;">
+
+                            </div>
+                            <div style="width: 100%;">
+                                <input id="libro3" style="width: 75%;" type="text" name="fname"
+                                    onkeydown="enterEvento('libro3')" placeholder="Inserte su comentario">
+                                <button type="button" onclick="agregar('libro3')">Insertar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Libro 4-->
+                <div class="container" style="background-color: #FFE5CC; padding: 5px; margin-top: 10px;">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://img1.od-cdn.com/ImageType-400/5835-1/FB0/D8B/4C/%7BFB0D8B4C-8992-4C2F-9574-9927C78228D0%7DImg400.jpg"
+                                class="img-fluid" alt="Responsive image" style="height: 250px;">
+                        </div>
+                        <div class="col-4" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                El Escarabajo
+                            </p>
+                            <p style="height: 200px; overflow-y: scroll;">
+                                El narrador y protagonista de esta novela es un escarabajo de
+                                lapislázuli, talismán egipcio creado para la Reina Nefertari. El escarabajo cuenta su
+                                peripecia desde el Egipto de Ramsés II hasta
+                                nuestros días, que es la de los personajes por cuyas manos pasó; La
+                                novela se convierte en una alucinante excursión por más de tres milenios
+                                de historia, repleta de acontecimientos, vida y emoción. Fruto de cuatro
+                                años de intenso trabajo y búsqueda, «El escarabajo», prodigio de
+                                reconstrucción histórica y de fluidez en el relato, solo podía ser
+                                escrito por quien reuniese la doble condición de experto en Humanidades
+                                y maestro de la narrativa.
+                            </p>
+                        </div>
+                        <div class="col-6" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Comentarios
+                            </p>
+                            <div id="com-libro4" style="height: 150px; overflow-y: scroll;">
+
+                            </div>
+                            <div style="width: 100%;">
+                                <input id="libro4" style="width: 75%;" type="text" name="fname"
+                                    onkeydown="enterEvento('libro4')" placeholder="Inserte su comentario">
+                                <button type="button" onclick="agregar('libro4')">Insertar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Libro 5-->
+                <div class="container" style="background-color: #FFE5CC; padding: 5px; margin-top: 10px;">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/417N41GASiL._SX311_BO1,204,203,200_.jpg"
+                                class="img-fluid" alt="Responsive image" style="height: 250px;">
+                        </div>
+                        <div class="col-4" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Un Mundo Feliz
+                            </p>
+                            <p style="height: 200px; overflow-y: scroll;">
+                                Bernard Marx vive en un mundo ideal, donde cada persona esta clasificada segun las
+                                aptitudes que le son asignadas antes de nacer por la direccion de crianza y
+                                acondicionamiento. En Norte America, exise una reserva salvaje, donde los humanos aun
+                                habitan sin restricciones. Tras una visita de Bernard a esta reserva, llevara consigo a
+                                un ""salvaje"" de la reserva, quien se sentira totalmente fuera de sitio en esta
+                                organizacion ""perfecta"". Una novela desconcertante, que te llevara a preguntarte si la
+                                sociedad puede realmente existir y a que precio.
+                            </p>
+                        </div>
+                        <div class="col-6" style="font-family: 'Righteous', cursive;">
+                            <p>
+                                Comentarios
+                            </p>
+                            <div id="com-libro5" style="height: 150px; overflow-y: scroll;">
+
+                            </div>
+                            <div style="width: 100%;">
+                                <input id="libro5" style="width: 75%;" type="text" name="fname"
+                                    onkeydown="enterEvento('libro5')" placeholder="Inserte su comentario">
+                                <button type="button" onclick="agregar('libro5')">Insertar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--Fin de sección de Libros-->
+            </div>
+
+
+
+            <div class="col-1">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
